@@ -1,15 +1,18 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root{
     --primary-color: #edf2fc;
     --secondary-color: #212121;
+    --third-color: #ffce00;
 }
 .dark-theme{
     --primary-color: #000106;
     --secondary-color: #fff;
+    --third-color: #ffe799;
 }
 
 #icon{
@@ -36,6 +39,10 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.hero nav h1 a{
+    text-decoration: none;
 }
 
 .logo{
@@ -126,4 +133,90 @@ span{
 
 .social-links a:hover{
     color: #ff4321;
+}
+
+/*footer*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+
+.row{
+	display: flex;
+}
+
+ul{
+	list-style: none;
+}
+
+.footer{
+	background-color: var(--third-color);
+    padding: 70px 0;
+}
+
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	margin:0 10px 10px 0;
+	text-align: left;
+	line-height: 40px;
+	border-radius: 50%;
+	color: var(--primary-color);
+	transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px){
+    .footer-col{
+        width: 100%;
+    }
 }
