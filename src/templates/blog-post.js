@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -23,7 +24,16 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
+          <p>{post.frontmatter.description || post.excerpt}</p>
           <p>{post.frontmatter.date}</p>
+          <div>
+            <GatsbyImage
+              image={post.frontmatter.thumbnail.childImageSharp.gatsbyImageData}
+              className="post-image"
+              alt={post.frontmatter.title}
+            />
+          </div>
+          <small>{post.frontmatter.credit}</small>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -85,6 +95,17 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        credit
+        thumbnail {
+          publicURL
+          childImageSharp {
+            gatsbyImageData(
+              width: 700
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
