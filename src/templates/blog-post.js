@@ -10,6 +10,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
+  console.log(post.frontmatter.categories)
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -23,6 +24,15 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
+          {
+            post?.frontmatter?.categories?.map(category => {
+              return (
+                <Link to={`/category/${category.toLowerCase()}`}>
+                  {category}
+                </Link>
+              )
+            })
+          }
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.description || post.excerpt}</p>
           <p>{post.frontmatter.date}</p>
@@ -95,6 +105,8 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        categories
+        tags
         credit
         thumbnail {
           publicURL
