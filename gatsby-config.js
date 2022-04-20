@@ -6,6 +6,7 @@ module.exports = {
       summary: `who lives and works in Jakarta building useful things.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
+    image: `https://heriswn.github.io/favicon.png`,
     siteUrl: `https://heriswn.github.io/`,
     social: {
       twitter: `swnheri`,

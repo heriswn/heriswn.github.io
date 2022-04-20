@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-const Seo = ({ description, lang, meta, title }) => {
+const Seo = ({ description, lang, meta, title, image }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -18,6 +18,7 @@ const Seo = ({ description, lang, meta, title }) => {
           siteMetadata {
             title
             description
+            image
             social {
               twitter
             }
@@ -28,6 +29,7 @@ const Seo = ({ description, lang, meta, title }) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const metaImage = image || site.siteMetadata.image
   const defaultTitle = site.siteMetadata?.title
 
   return (
@@ -43,8 +45,16 @@ const Seo = ({ description, lang, meta, title }) => {
           content: metaDescription,
         },
         {
+          name: `image`,
+          content: metaImage,
+        },
+        {
           property: `og:title`,
           content: title,
+        },
+        {
+          property: `og:image`,
+          content: metaImage,
         },
         {
           property: `og:description`,
@@ -56,7 +66,7 @@ const Seo = ({ description, lang, meta, title }) => {
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
@@ -65,6 +75,10 @@ const Seo = ({ description, lang, meta, title }) => {
         {
           name: `twitter:title`,
           content: title,
+        },
+        {
+          name: `twitter:image`,
+          content: metaImage,
         },
         {
           name: `twitter:description`,
@@ -78,10 +92,12 @@ const Seo = ({ description, lang, meta, title }) => {
 Seo.defaultProps = {
   lang: `en`,
   meta: [],
+  image: ``,
   description: ``,
 }
 
 Seo.propTypes = {
+  image: PropTypes.string,
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),

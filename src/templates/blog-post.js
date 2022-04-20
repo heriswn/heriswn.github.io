@@ -14,6 +14,9 @@ const BlogPostTemplate = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
+        image={
+          data.site.siteMetadata.siteUrl + post.frontmatter.thumbnail.publicURL
+        }
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
@@ -94,6 +97,8 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
+        image
       }
     }
     markdownRemark(id: { eq: $id }) {
