@@ -39,7 +39,7 @@ const createTagPages = (posts, createPage) => {
       path: `tag/${slugify(tag)}`,
       component: path.resolve(`./src/templates/tag-page.js`),
       context: {
-        category: tag,
+        tag: tag,
       },
     })
   })

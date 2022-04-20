@@ -4,11 +4,13 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const TagPageTemplate = ({ data, location, pageContext }) => {
+  let { tag } = pageContext
   const posts = data?.allMarkdownRemark.nodes || []
+
   return (
     <Layout location={location}>
-      <Seo location={location} title={pageContext?.category} />
-      <h1>{pageContext?.category}</h1>
+      <Seo location={location} title={tag} />
+      <h1>{tag}</h1>
       <ol style={{ listStyle: `none` }}>
         {posts?.map(post => {
           const title = post?.frontmatter?.title
@@ -48,14 +50,14 @@ const TagPageTemplate = ({ data, location, pageContext }) => {
 export default TagPageTemplate
 
 export const pageQuery = graphql`
-  query TagPageByType($category: String!) {
+  query TagPageByType($tag: String!) {
     site {
       siteMetadata {
         title
       }
     }
     allMarkdownRemark(
-      filter: { frontmatter: { tags: { eq: $category } } }
+      filter: { frontmatter: { tags: { eq: $tag } } }
     ) {
       nodes {
         excerpt
