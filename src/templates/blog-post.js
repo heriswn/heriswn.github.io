@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { slugify } from "../utils/helper"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -29,7 +30,7 @@ const BlogPostTemplate = ({ data, location }) => {
           {post?.frontmatter?.categories?.map(category => {
             return (
               <p key={post.id}>
-                <Link to={`/category/${category.toLowerCase()}`}>
+                <Link to={`/category/${slugify(category)}`}>
                   {category}
                 </Link>
               </p>
@@ -51,6 +52,13 @@ const BlogPostTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
+        {post?.frontmatter?.tags?.map(tag => {
+          return (
+            <p key={post.id}>
+              <Link to={`/tag/${slugify(tag)}`}>{tag}</Link>
+            </p>
+          )
+        })}
         <hr />
         <footer>
           <Bio />

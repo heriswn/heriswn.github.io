@@ -1,6 +1,6 @@
 ---
 title: Hello World
-categories: ["category_name_1"]
+categories: ["category name 1"]
 tags: ["Manchester City", "Liga Inggris", "Pep Guardiola"]
 date: "2015-05-01T22:12:03.284Z"
 description: "Hello World"

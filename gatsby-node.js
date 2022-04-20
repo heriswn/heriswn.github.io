@@ -14,10 +14,32 @@ const createCategoryPages = (posts, createPage) => {
 
   categoriesFound.forEach(cat => {
     createPage({
-      path: `category/${cat.toLowerCase()}`,
+      path: `category/${slugify(cat)}`,
       component: path.resolve(`./src/templates/category-page.js`),
       context: {
         category: cat,
+      },
+    })
+  })
+}
+
+const createTagPages = (posts, createPage) => {
+  const tagsFound = []
+
+  posts.forEach(post => {
+    post?.frontmatter?.tags?.forEach(tag => {
+      if (tagsFound.indexOf(tag) === -1) {
+        tagsFound.push(tag)
+      }
+    })
+  })
+
+  tagsFound.forEach(tag => {
+    createPage({
+      path: `tag/${slugify(tag)}`,
+      component: path.resolve(`./src/templates/tag-page.js`),
+      context: {
+        category: tag,
       },
     })
   })
@@ -44,6 +66,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
             frontmatter {
               categories
+              tags
             }
           }
         }
@@ -82,6 +105,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
 
     createCategoryPages(posts, createPage)
+    createTagPages(posts, createPage)
   }
 }
 
@@ -139,4 +163,17 @@ exports.createSchemaCustomization = ({ actions }) => {
       slug: String
     }
   `)
+}
+
+// Helpers
+function slugify(str) {
+  return (
+    str &&
+    str
+      .match(
+        /[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g
+      )
+      .map((x) => x.toLowerCase())
+      .join('-')
+  )
 }
