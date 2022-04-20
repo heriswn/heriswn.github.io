@@ -2,6 +2,7 @@
 title: Hello World
 date: "2015-05-01T22:12:03.284Z"
 description: "Hello World"
+categories: ["category_name_1", "category_name_2"]
 ---
 
 This is my first post on my new fake blog! How exciting!

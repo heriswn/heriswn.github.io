@@ -1,6 +1,28 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
+const createCategoryPages = (posts, createPage) => {
+  const categoriesFound = []
+
+  posts.forEach(post => {
+    post?.frontmatter?.categories?.forEach(cat => {
+      if (categoriesFound.indexOf(cat) === -1) {
+        categoriesFound.push(cat)
+      }
+    })
+  })
+
+  categoriesFound.forEach(cat => {
+    createPage({
+      path: `category/${cat.toLowerCase()}`,
+      component: path.resolve(`./src/templates/category-page.js`),
+      context: {
+        category: cat,
+      },
+    })
+  })
+}
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
@@ -19,6 +41,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             id
             fields {
               slug
+            }
+            frontmatter {
+              categories
             }
           }
         }
@@ -55,6 +80,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         },
       })
     })
+
+    createCategoryPages(posts, createPage)
   }
 }
 

@@ -1,6 +1,7 @@
 ---
 title: My Second Post!
 date: "2015-05-06T23:46:37.121Z"
+categories: ["category_name_4", "category_name_3"]
 ---
 
 Wow! I love blogging so much already.
