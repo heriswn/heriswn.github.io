@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-tag-page-js",
     "path": "/tag/thomas-tuchel",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Heri Setiawan Blog"}},"allMarkdownRemark":{"nodes":[{"excerpt":"Wow! I love blogging so much already. Did you know that “despite its name, salted duck eggs can also be made from\nchicken eggs, though the…","fields":{"slug":"/my-second-post/"},"frontmatter":{"date":"May 06, 2015","title":"My Second Post!","description":null}}]}},"pageContext":{"category":"Thomas Tuchel"}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"Heri Setiawan Blog"}},"allMarkdownRemark":{"nodes":[{"excerpt":"Wow! I love blogging so much already. Did you know that “despite its name, salted duck eggs can also be made from\nchicken eggs, though the…","fields":{"slug":"/my-second-post/"},"frontmatter":{"date":"May 06, 2015","title":"My Second Post!","description":null}}]}},"pageContext":{"tag":"Thomas Tuchel"}},
     "staticQueryHashes": ["3343187749"]}
