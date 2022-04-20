@@ -39,7 +39,7 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "0BSD",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gatsbyjs/heriswn.github.io.git"
