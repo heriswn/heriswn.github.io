@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-category-page-js",
+    "path": "/category/category_name_1",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Heri Setiawan Blog"}},"allMarkdownRemark":{"nodes":[{"excerpt":"This is my first post on my new fake blog! How exciting! I’m sure I’ll write a lot more interesting things in the future. Oh, and here’s a…","fields":{"slug":"/hello-world/"},"frontmatter":{"date":"May 01, 2015","title":"Hello World","description":"Hello World"}}]}},"pageContext":{"category":"category_name_1"}},
+    "staticQueryHashes": ["2841359383"]}
