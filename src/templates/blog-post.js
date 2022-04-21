@@ -5,8 +5,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import CategoryList from "../components/category-list"
-import TagList from "../components/tag-list"
+import { slugify } from "../utils/helper"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -28,7 +27,11 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          <CategoryList />
+          {post.frontmatter.categories.map((cat, index) => (
+            <Link key={index} to={`/category/${slugify(cat)}`}>
+              {cat}
+            </Link>
+          ))}
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.description || post.excerpt}</p>
           <p>{post.frontmatter.date}</p>
@@ -45,7 +48,11 @@ const BlogPostTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <TagList/>
+        {post.frontmatter.tags.map((tagIndex, index) => (
+          <li key={index}>
+            <Link to={`/tag/${slugify(tagIndex)}`}>{tagIndex}</Link>
+          </li>
+        ))}
         <hr />
         <footer>
           <Bio />
