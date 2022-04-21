@@ -1,50 +1,6 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-const createCategoryPages = (posts, createPage) => {
-  const categoriesFound = []
-
-  posts.forEach(post => {
-    post?.frontmatter?.categories?.forEach(cat => {
-      if (categoriesFound.indexOf(cat) === -1) {
-        categoriesFound.push(cat)
-      }
-    })
-  })
-
-  categoriesFound.forEach(cat => {
-    createPage({
-      path: `category/${slugify(cat)}`,
-      component: path.resolve(`./src/templates/category-page.js`),
-      context: {
-        category: cat,
-      },
-    })
-  })
-}
-
-const createTagPages = (posts, createPage) => {
-  const tagsFound = []
-
-  posts.forEach(post => {
-    post?.frontmatter?.tags?.forEach(tagIndex => {
-      if (tagsFound.indexOf(tagIndex) === -1) {
-        tagsFound.push(tagIndex)
-      }
-    })
-  })
-
-  tagsFound.forEach(tagIndex => {
-    createPage({
-      path: `tag/${slugify(tagIndex)}`,
-      component: path.resolve(`./src/templates/tag-page.js`),
-      context: {
-        tag: tagIndex,
-      },
-    })
-  })
-}
-
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
@@ -104,7 +60,52 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
 
+    const createCategoryPages = (posts, createPage) => {
+      const categoriesFound = []
+
+      posts.forEach(post => {
+        post?.frontmatter?.categories?.forEach(cat => {
+          if (categoriesFound.indexOf(cat) === -1) {
+            categoriesFound.push(cat)
+          }
+        })
+      })
+
+      categoriesFound.forEach(cat => {
+        createPage({
+          path: `category/${slugify(cat)}`,
+          component: path.resolve(`./src/templates/category-page.js`),
+          context: {
+            category: cat,
+          },
+        })
+      })
+    }
+
     createCategoryPages(posts, createPage)
+
+    const createTagPages = (posts, createPage) => {
+      const tagsFound = []
+
+      posts.forEach(post => {
+        post?.frontmatter?.tags?.forEach(tagIndex => {
+          if (tagsFound.indexOf(tagIndex) === -1) {
+            tagsFound.push(tagIndex)
+          }
+        })
+      })
+
+      tagsFound.forEach(tagIndex => {
+        createPage({
+          path: `tag/${slugify(tagIndex)}`,
+          component: path.resolve(`./src/templates/tag-page.js`),
+          context: {
+            tag: tagIndex,
+          },
+        })
+      })
+    }
+
     createTagPages(posts, createPage)
   }
 }
