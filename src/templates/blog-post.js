@@ -1,12 +1,12 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-// import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-// import CategoryList from "../components/category-list"
-// import TagList from "../components/tag-list"
+import CategoryList from "../components/category-list"
+import TagList from "../components/tag-list"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -28,24 +28,24 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          {/* <CategoryList /> */}
+          <CategoryList />
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.description || post.excerpt}</p>
           <p>{post.frontmatter.date}</p>
-          {/* <div>
+          <div>
             <GatsbyImage
               image={post.frontmatter.thumbnail.childImageSharp.gatsbyImageData}
               className="post-image"
               alt={post.frontmatter.title}
             />
-          </div> */}
+          </div>
           <small>{post.frontmatter.credit}</small>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        {/* <TagList/> */}
+        <TagList/>
         <hr />
         <footer>
           <Bio />

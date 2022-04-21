@@ -18,10 +18,11 @@ const TagList = () => {
 
   return (
     <div>
+      <small>Tags:</small>
       {tags.map((tag, index) => (
-        <Link key={index} to={`/tag/${slugify(tag)}`}>
-          {tag}
-        </Link>
+        <li key={index}>
+          <Link to={`/tag/${slugify(tag)}`}>{tag}</Link>
+        </li>
       ))}
     </div>
   )

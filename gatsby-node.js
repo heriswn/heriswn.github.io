@@ -27,19 +27,19 @@ const createTagPages = (posts, createPage) => {
   const tagsFound = []
 
   posts.forEach(post => {
-    post?.frontmatter?.tags?.forEach(tag => {
-      if (tagsFound.indexOf(tag) === -1) {
-        tagsFound.push(tag)
+    post?.frontmatter?.tags?.forEach(tagIndex => {
+      if (tagsFound.indexOf(tagIndex) === -1) {
+        tagsFound.push(tagIndex)
       }
     })
   })
 
-  tagsFound.forEach(tag => {
+  tagsFound.forEach(tagIndex => {
     createPage({
-      path: `tag/${slugify(tag)}`,
+      path: `tag/${slugify(tagIndex)}`,
       component: path.resolve(`./src/templates/tag-page.js`),
       context: {
-        tag: tag,
+        tag: tagIndex,
       },
     })
   })
