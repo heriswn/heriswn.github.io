@@ -1,12 +1,12 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import CategoryList from "../components/category-list"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import TagList from "../components/tag-list"
+// import CategoryList from "../components/category-list"
+// import TagList from "../components/tag-list"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -28,7 +28,7 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          <CategoryList />
+          {/* <CategoryList /> */}
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.description || post.excerpt}</p>
           <p>{post.frontmatter.date}</p>
@@ -45,7 +45,7 @@ const BlogPostTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <TagList/>
+        {/* <TagList/> */}
         <hr />
         <footer>
           <Bio />
