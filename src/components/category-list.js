@@ -17,13 +17,13 @@ const CategoryList = () => {
   const categories = data.markdownRemark.frontmatter.categories
 
   return (
-    <div>
+    <p>
       {categories.map((cat, index) => (
         <Link key={index} to={`/category/${slugify(cat)}`}>
           {cat}
         </Link>
       ))}
-    </div>
+    </p>
   )
 }
 
