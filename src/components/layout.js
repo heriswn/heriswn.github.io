@@ -14,9 +14,21 @@ const Layout = ({ location, title, children }) => {
     )
   } else {
     header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
+      <div className="header-home">
+        <div>
+          <Link className="header-link-home" to="/">
+            {title}
+          </Link>
+        </div>
+        <div className="header-home-category">
+          <li>
+            <Link to="/category/articles">Article</Link>
+          </li>
+          <li>
+            <Link to="/category/trivia">Trivia</Link>
+          </li>
+        </div>
+      </div>
     )
   }
 

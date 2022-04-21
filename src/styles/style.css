@@ -275,8 +275,32 @@ a:focus {
   margin-top: var(--spacing-0);
 }
 
+.post-list-item h2:hover {
+  /* Created with https://www.css-gradient.com */
+  background: #06966A;
+  background: -webkit-linear-gradient(left, #06966A, #2563EB);
+  background: -moz-linear-gradient(left, #06966A, #2563EB);
+  background: linear-gradient(to right, #06966A, #2563EB);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
 .post-list-item header {
   margin-bottom: var(--spacing-4);
+}
+
+/* Header */
+.header-home {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-home-category {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-2);
 }
 
 .header-link-home {
@@ -307,6 +331,12 @@ a:focus {
 }
 
 .blog-post header h1 {
+  background: #06966A;
+  background: -webkit-linear-gradient(left, #06966A, #2563EB);
+  background: -moz-linear-gradient(left, #06966A, #2563EB);
+  background: linear-gradient(to right, #06966A, #2563EB);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
 }
 
@@ -324,6 +354,19 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
+/* Category */
+.category {
+  margin-bottom: var(--spacing-2);
+}
+
+/* Tag */
+.tag {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-5);
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {
@@ -334,5 +377,11 @@ a:focus {
   ul,
   ol {
     list-style-position: inside;
+  }
+}
+
+@media (max-width: 42rem) {
+  .header-home-category {
+    display: none;
   }
 }

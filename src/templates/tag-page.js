@@ -6,11 +6,12 @@ import Seo from "../components/seo"
 const TagPageTemplate = ({ data, location, pageContext }) => {
   let { tag } = pageContext
   const posts = data?.allMarkdownRemark.nodes || []
+  const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
-    <Layout location={location}>
+    <Layout location={location} title={siteTitle}>
       <Seo location={location} title={tag} />
-      <h1>{tag}</h1>
+      <h1>#{tag}</h1>
       <ol style={{ listStyle: `none` }}>
         {posts?.map(post => {
           const title = post?.frontmatter?.title
@@ -33,7 +34,7 @@ const TagPageTemplate = ({ data, location, pageContext }) => {
                 <section>
                   <p
                     dangerouslySetInnerHTML={{
-                      __html: post?.frontmatter?.description || "",
+                      __html: post?.frontmatter?.description || post.excerpt,
                     }}
                     itemProp="description"
                   />

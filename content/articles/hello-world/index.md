@@ -1,6 +1,6 @@
 ---
 title: Hello World
-categories: ["category name 1"]
+categories: ["Trivia"]
 tags: ["Manchester City", "Liga Inggris", "Pep Guardiola"]
 date: "2015-05-01T22:12:03.284Z"
 description: "Hello World"

@@ -27,11 +27,13 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          {post.frontmatter.categories.map((cat, index) => (
-            <Link key={index} to={`/category/${slugify(cat)}`}>
-              {cat}
-            </Link>
-          ))}
+          <div className="category">
+            {post.frontmatter.categories.map((cat, index) => (
+              <Link key={index} to={`/category/${slugify(cat)}`}>
+                {cat}
+              </Link>
+            ))}
+          </div>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.description || post.excerpt}</p>
           <p>{post.frontmatter.date}</p>
@@ -48,11 +50,13 @@ const BlogPostTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        {post.frontmatter.tags.map((tagIndex, index) => (
-          <li key={index}>
-            <Link to={`/tag/${slugify(tagIndex)}`}>{tagIndex}</Link>
-          </li>
-        ))}
+        <div className="tag">
+          {post.frontmatter.tags.map((tagIndex, index) => (
+            <li key={index}>
+              <Link to={`/tag/${slugify(tagIndex)}`}>#{tagIndex}</Link>
+            </li>
+          ))}
+        </div>
         <hr />
         <footer>
           <Bio />
