@@ -180,7 +180,7 @@ ol {
 ul li,
 ol li {
   padding-left: var(--spacing-0);
-  margin-bottom: calc(var(--spacing-8) / 2);
+  margin-bottom: calc(var(--spacing-2) / 2);
 }
 
 li > p {
@@ -230,17 +230,17 @@ table thead tr th {
 /* Link */
 
 a {
-  color: rgba(37, 99, 235, 1);
+  color: var(--color-primary);
   font-weight: 700;
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: 2px underline rgba(37, 99, 235, 1);
+  text-decoration: 2px underline var(--color-primary);
 }
 
 a:focus {
-  text-decoration: 2px underline rgba(37, 99, 235, 1);
+  text-decoration: 2px underline var(--color-primary);
 }
 
 /* Custom classes */
@@ -261,7 +261,6 @@ a:focus {
 
 .main-heading {
   font-size: var(--fontSize-7);
-  text-decoration: none;
   margin: 0;
 }
 
@@ -324,8 +323,11 @@ a:focus {
 .header-link-home {
   font-weight: var(--fontWeight-bold);
   font-family: var(--font-heading);
-  text-decoration: none;
   font-size: var(--fontSize-2);
+}
+
+.header-link-home:hover {
+  text-decoration: none;
 }
 
 .bio {
@@ -394,11 +396,9 @@ a:focus {
   }
   ul,
   ol {
-    list-style-position: inside;
+    list-style-position: outside;
   }
-}
 
-@media (max-width: 42rem) {
   .header-home-category {
     display: none;
   }
