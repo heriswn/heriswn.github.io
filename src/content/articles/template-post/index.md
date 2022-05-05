@@ -9,7 +9,7 @@ credit: "Foto: gettyimages"
 
 # This is a Template for Articles Post!
 
-## 1st Section
+## First Section
 
 This is how section 1st look like!
 

@@ -366,8 +366,15 @@ a:focus {
   font-family: var(--font-heading);
 }
 
+/* next-previous */
 .blog-post-nav ul {
   margin: var(--spacing-0);
+}
+
+.blog-post-nav ul li {
+  padding: 30px;
+  border-radius: 5px;
+  background: yellow;
 }
 
 .gatsby-highlight {
@@ -387,6 +394,17 @@ a:focus {
   margin-bottom: var(--spacing-5);
 }
 
+/* ToC */
+.ul-toc {
+  position: fixed;
+  padding: 0.75rem;
+  width: 20rem;
+  top: auto;
+  max-height: 30vh;
+  list-style: none;
+  left: calc(50% + 350px);
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {
@@ -400,6 +418,12 @@ a:focus {
   }
 
   .header-home-category {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1330px) {
+  .toc {
     display: none;
   }
 }
