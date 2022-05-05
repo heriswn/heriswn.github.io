@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
+import ToC from "../components/toc"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -27,6 +28,7 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
+          <ToC headings={post.headings} />
           <div className="category">
             {post.frontmatter.categories.map((cat, index) => (
               <Link key={index} to={`/category/${slugify(cat)}`}>
@@ -58,6 +60,12 @@ const BlogPostTemplate = ({ data, location }) => {
           ))}
         </div>
         <hr />
+        <section>
+          <div>
+            <h8>{post.frontmatter.title}</h8>
+            <p>{post.excerpt}</p>
+          </div>
+        </section>
         <footer>
           <Bio />
         </footer>
@@ -75,14 +83,14 @@ const BlogPostTemplate = ({ data, location }) => {
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+                {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
               <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
+                {next.frontmatter.title}
               </Link>
             )}
           </li>
@@ -109,8 +117,12 @@ export const pageQuery = graphql`
     }
     markdownRemark(id: { eq: $id }) {
       id
-      excerpt(pruneLength: 160)
+      excerpt(pruneLength: 50)
       html
+      headings {
+        value
+        depth
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
