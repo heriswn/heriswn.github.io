@@ -18,14 +18,14 @@ const Layout = ({ location, title, children }) => {
         <Link className="header-link-home" to="/">
           {title}
         </Link>
-        <div className="header-home-category">
+        <ul className="header-home-category">
           <li>
             <Link to="/category/articles">Article</Link>
           </li>
           <li>
             <Link to="/category/trivia">Trivia</Link>
           </li>
-        </div>
+        </ul>
       </section>
     )
   }
