@@ -60,12 +60,6 @@ const BlogPostTemplate = ({ data, location }) => {
           ))}
         </div>
         <hr />
-        <section>
-          <div>
-            <h8>{post.frontmatter.title}</h8>
-            <p>{post.excerpt}</p>
-          </div>
-        </section>
         <footer>
           <Bio />
         </footer>
@@ -136,7 +130,7 @@ export const pageQuery = graphql`
             gatsbyImageData(
               width: 700
               placeholder: BLURRED
-              formats: [AUTO, WEBP, AVIF]
+              formats: [AUTO, WEBP, JPG]
             )
           }
         }

@@ -366,17 +366,6 @@ a:focus {
   font-family: var(--font-heading);
 }
 
-/* next-previous */
-.blog-post-nav ul {
-  margin: var(--spacing-0);
-}
-
-.blog-post-nav ul li {
-  padding: 30px;
-  border-radius: 5px;
-  background: yellow;
-}
-
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
 }
