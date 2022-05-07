@@ -43,7 +43,7 @@ const BlogPostTemplate = ({ data, location }) => {
             <GatsbyImage
               image={post.frontmatter.thumbnail.childImageSharp.gatsbyImageData}
               className="post-image"
-              alt={post.frontmatter.title}
+              alt={`${post.frontmatter.title}`}
             />
           </div>
           <small>{post.frontmatter.credit}</small>
