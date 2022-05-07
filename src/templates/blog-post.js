@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-import ToC from "../components/toc"
+// import ToC from "../components/toc"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -28,7 +28,7 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          <ToC headings={post.headings} />
+          {/* <ToC headings={post.headings} /> */}
           <div className="category">
             {post.frontmatter.categories.map((cat, index) => (
               <Link key={index} to={`/category/${slugify(cat)}`}>
