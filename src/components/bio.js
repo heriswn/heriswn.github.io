@@ -28,7 +28,7 @@ const Bio = () => {
       <StaticImage
         className="bio-avatar"
         layout="fixed"
-        formats={["auto", "webp", "jpg"]}
+        // formats={["auto", "webp", "jpg"]}
         src="../assets/profile-pic.png"
         width={50}
         height={50}
