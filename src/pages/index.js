@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import PostListing from "../components/postList"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -61,6 +62,7 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </ol>
+      <PostListing postEdges={posts} />
     </Layout>
   )
 }
@@ -83,6 +85,7 @@ export const pageQuery = graphql`
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
           title
+          template
           description
         }
       }

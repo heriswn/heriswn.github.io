@@ -1,5 +1,6 @@
 ---
 title: My Second Post!
+template: ["Post"]
 categories: ["Articles"]
 tags: ["Chelsea", "Liga Inggris", "Thomas Tuchel"]
 date: "2015-05-06T23:46:37.121Z"

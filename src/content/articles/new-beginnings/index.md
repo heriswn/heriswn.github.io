@@ -1,5 +1,6 @@
 ---
 title: New Beginnings
+template: ["Post"]
 categories: ["Articles"]
 tags: ["Liverpool", "Liga Inggris", "Jurgen Klopp"]
 date: "2015-05-28T22:40:32.169Z"
