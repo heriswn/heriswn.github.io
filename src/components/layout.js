@@ -1,10 +1,52 @@
-import * as React from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
+import Footer from "./footer"
+
+import "../styles/style.css"
+import "../styles/light-theme.css"
+import "../styles/third-theme.css"
+
+function setDarkTheme(setTheme) {
+  localStorage.setItem("theme", "dark")
+  setTheme("dark")
+  document.body.style.backgroundColor = "#252525"
+}
+
+function setLightTheme(setTheme) {
+  localStorage.setItem("theme", "light")
+  setTheme("light")
+  document.body.style.backgroundColor = "white"
+}
+
+function setThirdTheme(setTheme) {
+  localStorage.setItem("theme", "third")
+  setTheme("third")
+  document.body.style.backgroundColor = "#f1e2c0"
+}
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
+  const [theme, setTheme] = useState("dark")
   let header
+
+  const onUpdateTheme = theme => {
+    if (theme === "dark") {
+      setThirdTheme(setTheme)
+    } else if (theme === "light") {
+      setDarkTheme(setTheme)
+    } else if (theme === "third") {
+      setLightTheme(setTheme)
+    }
+  }
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme")
+
+    if (savedTheme === "dark") setDarkTheme(setTheme)
+    if (savedTheme === "third") setThirdTheme(setTheme)
+    if (savedTheme === "light") setLightTheme(setTheme)
+  }, [])
 
   if (isRootPath) {
     header = (
@@ -39,22 +81,7 @@ const Layout = ({ location, title, children }) => {
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <hr className="break-line" />
-      <footer>
-        <div className="footer">
-          <div>
-            <span>
-              Powered by <a href="https://www.gatsbyjs.com">Gatsby</a>, Hosted
-              by <a href="https://www.vercel.com">Vercel</a>.
-            </span>
-          </div>
-          <div>
-            <span>
-              <a href="https://www.github.com/heriswn">© Heriswn</a>,{` `}
-              All rights reserved.
-            </span>
-          </div>
-        </div>
-      </footer>
+      <Footer onUpdateTheme={() => onUpdateTheme(theme)} theme={theme} />
     </div>
   )
 }
