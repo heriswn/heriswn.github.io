@@ -1,5 +1,6 @@
 ---
 title: Template Post!
+template: ["Post"]
 categories: ["Articles"]
 tags: ["Arsenal", "Liga Inggris", "Arteta"]
 date: "2022-04-22"
