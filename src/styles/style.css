@@ -442,11 +442,6 @@ a:focus {
   margin-bottom: var(--spacing-1);
 }
 
-.footer p {
-  font-weight: 350;
-  margin: var(--spacing-1);
-}
-
 /* Media queries */
 
 @media (max-width: 42rem) {

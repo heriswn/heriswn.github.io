@@ -38,20 +38,20 @@ const Layout = ({ location, title, children }) => {
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className="global-header">{header}</header>
       <main>{children}</main>
-      <hr className="break-line"/>
+      <hr className="break-line" />
       <footer>
         <div className="footer">
           <div>
-            <p>
+            <span>
               Powered by <a href="https://www.gatsbyjs.com">Gatsby</a>, Hosted
               by <a href="https://www.vercel.com">Vercel</a>.
-            </p>
+            </span>
           </div>
           <div>
-            <p>
+            <span>
               <a href="https://www.github.com/heriswn">© Heriswn</a>,{` `}
               All rights reserved.
-            </p>
+            </span>
           </div>
         </div>
       </footer>
