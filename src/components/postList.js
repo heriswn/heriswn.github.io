@@ -20,7 +20,7 @@ export default class PostListing extends Component {
     const postList = this.getPostList()
 
     return (
-      <section>
+      <div>
         {postList.map(post => {
           return (
             <article
@@ -49,7 +49,7 @@ export default class PostListing extends Component {
             </article>
           )
         })}
-      </section>
+      </div>
     )
   }
 }
