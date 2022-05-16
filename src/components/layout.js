@@ -17,17 +17,19 @@ const Layout = ({ location, title, children }) => {
   } else {
     header = (
       <div className="header-home">
-        <Link className="header-link-home" to="/">
-          {title}
-        </Link>
-        <ul className="header-home-category">
+        <div>
+          <Link className="header-link-home" to="/">
+            {title}
+          </Link>
+        </div>
+        <div className="header-home-category">
           <li>
             <Link to="/category/articles">Article</Link>
           </li>
           <li>
             <Link to="/category/trivia">Trivia</Link>
           </li>
-        </ul>
+        </div>
       </div>
     )
   }
@@ -36,10 +38,22 @@ const Layout = ({ location, title, children }) => {
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className="global-header">{header}</header>
       <main>{children}</main>
+      <hr className="break-line"/>
       <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+        <div className="footer">
+          <div>
+            <p>
+              Powered by <a href="https://www.gatsbyjs.com">Gatsby</a>, Hosted
+              by <a href="https://www.vercel.com">Vercel</a>.
+            </p>
+          </div>
+          <div>
+            <p>
+              <a href="https://www.github.com/heriswn">© Heriswn</a>,{` `}
+              All rights reserved.
+            </p>
+          </div>
+        </div>
       </footer>
     </div>
   )
