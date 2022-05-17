@@ -1,0 +1,50 @@
+.light {
+  --color-primary: #6b76f3;
+  --color-link: #fff;
+  --color-text: #343434;
+  --color-text-light: #777;
+  --color-heading: #222;
+  --color-heading-black: black;
+  --color-accent: #444;
+  --color-border: #bbb;
+  --background-color: #fff;
+  --primary: #6b76f3;
+  --navbar-color: #f0f0f0;
+  --sidebar-color-hover: #dedede;
+  --reverse: var(--background-color);
+  --scrollbar: var(--navbar-color);
+  --scrollbar-track: var(--sidebar-color-hover);
+}
+
+.light p {
+  color: var(--color-text);
+}
+
+.light ol,
+.light ul,
+.light table,
+.light blockquote {
+  -webkit-font-smoothing: auto;
+}
+
+.light pre[class*='language-'] {
+  border-color: var(--color-heading);
+}
+
+.light pre.language-terminal,
+.light table {
+  border-color: var(--color-border);
+}
+
+.light blockquote {
+  border-color: var(--color-border);
+  border-left-color: var(--color-primary);
+}
+
+.light .filename {
+  border: 1px solid #171717;
+}
+
+.light a.anchor.before svg {
+  fill: var(--color-primary);
+}

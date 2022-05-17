@@ -46,7 +46,7 @@ const BlogPostTemplate = ({ data, location }) => {
               alt={`${post.frontmatter.title}`}
             />
           </div>
-          <small>{post.frontmatter.credit}</small>
+          <span>{post.frontmatter.credit}</span>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}

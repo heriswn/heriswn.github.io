@@ -31,11 +31,16 @@ export default class PostListing extends Component {
               <header>
                 <div>
                   <h2>
-                    <Link to={post.path} key={post.title} itemProp="url">
+                    <Link
+                      to={post.path}
+                      key={post.title}
+                      itemProp="url"
+                      className="postList-link"
+                    >
                       <span itemProp="headline">{post.title}</span>
                     </Link>
                   </h2>
-                  <small>{post.date}</small>
+                  <time>{post.date}</time>
                 </div>
               </header>
               <div>
