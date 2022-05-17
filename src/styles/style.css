@@ -54,7 +54,8 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #fff;
+  --color-primary: #fdb54a;
+  --color-link: #222;
   --color-text: #d0d5df;
   --color-text-light: #fff;
   --color-heading: var(--primary);
@@ -245,6 +246,7 @@ a {
 
 a:hover {
   background: var(--primary);
+  color: var(--color-link);
   text-decoration: 2px underline var(--primary);
 }
 

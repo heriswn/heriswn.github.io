@@ -1,21 +1,25 @@
 .light {
-  --color-primary: #005b99;
+  --color-primary: #6b76f3;
+  --color-link: #fff;
   --color-text: #343434;
-  --color-text-light: black;
+  --color-text-light: #777;
   --color-heading: #222;
   --color-heading-black: black;
   --color-accent: #444;
   --color-border: #bbb;
-  --background-color: #eee;
+  --background-color: #fff;
   --primary: #6b76f3;
   --navbar-color: #f0f0f0;
-  --sidebar-color-hover: #ddd;
+  --sidebar-color-hover: #dedede;
   --reverse: var(--background-color);
   --scrollbar: var(--navbar-color);
   --scrollbar-track: var(--sidebar-color-hover);
 }
 
-.light p,
+.light p {
+  color: var(--color-text);
+}
+
 .light ol,
 .light ul,
 .light table,

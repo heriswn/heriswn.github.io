@@ -24,6 +24,11 @@ function setThirdTheme(setTheme) {
   document.body.style.backgroundColor = "#f1e2c0"
 }
 
+function getMainClass(theme) {
+  let classString = theme
+  return classString
+}
+
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
@@ -77,7 +82,7 @@ const Layout = ({ location, title, children }) => {
   }
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
+    <div className={`${getMainClass(theme)} global-wrapper`} data-is-root-path={isRootPath}>
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <hr className="break-line" />
