@@ -85,7 +85,6 @@ const Layout = ({ location, title, children }) => {
     <div className={`${getMainClass(theme)} global-wrapper`} data-is-root-path={isRootPath}>
       <header className="global-header">{header}</header>
       <main>{children}</main>
-      <hr className="break-line" />
       <Footer onUpdateTheme={() => onUpdateTheme(theme)} theme={theme} />
     </div>
   )

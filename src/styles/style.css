@@ -168,61 +168,40 @@ h6 > a {
 
 /* Prose */
 
-p {
-  line-height: var(--lineHeight-relaxed);
-  --baseline-multiplier: 0.179;
-  --x-height-multiplier: 0.35;
-  margin: var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0);
-  padding: var(--spacing-0);
-}
-
+p,
+ol,
 ul,
-ol {
-  margin-left: var(--spacing-0);
-  margin-right: var(--spacing-0);
-  padding: var(--spacing-0);
-  margin-bottom: var(--spacing-8);
-  list-style-position: outside;
-  list-style-image: none;
-}
-
-ul li,
-ol li {
-  padding-left: var(--spacing-0);
-  margin-bottom: calc(var(--spacing-2) / 2);
-}
-
-li > p {
-  margin-bottom: calc(var(--spacing-8) / 2);
-}
-
-li *:last-child {
-  margin-bottom: var(--spacing-0);
-}
-
-li > ul {
-  margin-left: var(--spacing-8);
-  margin-top: calc(var(--spacing-8) / 2);
-}
-
+table,
 blockquote {
-  color: var(--color-text-light);
-  margin-left: calc(-1 * var(--spacing-6));
-  margin-right: var(--spacing-8);
-  padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
-  border-left: var(--spacing-1) solid var(--color-primary);
-  font-size: var(--fontSize-2);
-  font-style: italic;
-  margin-bottom: var(--spacing-8);
+  font-size: 1.2rem;
+  margin: 0 0 2rem;
+  color: var(--color-text);
 }
 
-blockquote > :last-child {
-  margin-bottom: var(--spacing-0);
+button {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--heading-font-family);
+  border-radius: 8px;
 }
 
-blockquote > ul,
-blockquote > ol {
-  list-style-position: inside;
+ol li,
+ul li {
+  margin-bottom: 0.3rem;
+}
+
+ol li p,
+ul li p {
+  margin: 0;
+}
+
+ol li ol,
+ul li ul {
+  margin: 0.3rem;
 }
 
 table {
@@ -301,6 +280,10 @@ a:focus {
 
 .post-list-item h2 :link {
   text-decoration: none;
+}
+
+.post-list-item time {
+  color: var(--color-text);
 }
 
 .postList-link:hover {
@@ -405,6 +388,10 @@ a:focus {
   font-family: var(--font-heading);
 }
 
+.blog-post span {
+  color: var(--color-text);
+}
+
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
 }
@@ -437,13 +424,29 @@ a:focus {
 .break-line {
   width: 6rem;
   height: 0.125rem;
-  background-color: rgba(229,231,235,1);
+  background-color: var(--color-primary);
 }
 
 /* footer */
 .footer {
   text-align: center;
-  margin-bottom: var(--spacing-1);
+  margin-top: var(--spacing-5);
+  margin-bottom: var(--spacing-0);
+}
+
+.footer span {
+  color: var(--color-text);
+}
+
+/* theme switcher */
+.theme-switcher {
+  margin-left: 0;
+  min-width: auto;
+  margin-right: -0.5rem;
+}
+
+.theme-switcher img {
+  max-width: 20px;
 }
 
 /* Media queries */
