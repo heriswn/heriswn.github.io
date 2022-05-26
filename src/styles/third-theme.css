@@ -7,6 +7,7 @@
   --color-heading-black: black;
   --color-accent: #cb4b16;
   --color-border: #332810;
+  --light-border-color: #6b4a00;
   --background-color: #ebdbb2;
   --primary: #6c71c4;
   --navbar-color: #f0d69a;
@@ -16,7 +17,7 @@
   --scrollbar-track: var(--sidebar-color-hover);
 }
 
-.third p {
+/* .third p {
   color: var(--color-text);
 }
 
@@ -47,4 +48,4 @@
 
 .third a.anchor.before svg {
   fill: var(--color-primary);
-}
+} */

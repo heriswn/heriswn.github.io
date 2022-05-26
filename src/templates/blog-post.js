@@ -38,7 +38,9 @@ const BlogPostTemplate = ({ data, location }) => {
           </div>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.description || post.excerpt}</p>
-          <p>{post.frontmatter.date}</p>
+          <p>
+            <small>{post.frontmatter.date}</small>
+          </p>
           <div>
             <GatsbyImage
               image={post.frontmatter.thumbnail.childImageSharp.gatsbyImageData}

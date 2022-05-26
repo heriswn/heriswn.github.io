@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Footer from "./footer"
 
 import "../styles/style.css"
+import "../styles/new-moon.css"
 import "../styles/light-theme.css"
 import "../styles/third-theme.css"
 

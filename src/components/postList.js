@@ -40,7 +40,9 @@ export default class PostListing extends Component {
                       <span itemProp="headline">{post.title}</span>
                     </Link>
                   </h2>
-                  <time>{post.date}</time>
+                  <p>
+                    <small>{post.date}</small>
+                  </p>
                 </div>
               </header>
               <div>
