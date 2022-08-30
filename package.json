@@ -8,7 +8,7 @@
     "url": "https://github.com/heriswn/heriswn.github.io/issues"
   },
   "dependencies": {
-    "gatsby": "4.20.0",
+    "gatsby": "4.22.0",
     "gatsby-plugin-feed": "4.20.0",
     "gatsby-plugin-gatsby-cloud": "4.20.0",
     "gatsby-plugin-google-analytics": "4.20.0",
