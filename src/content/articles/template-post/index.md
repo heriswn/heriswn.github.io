@@ -2,7 +2,7 @@
 title: Template Post!
 template: ["Post"]
 categories: ["Articles"]
-tags: ["Arsenal", "Liga Inggris", "Arteta"]
+tags: ["Edu", "Docs", "Cybersecurity"]
 date: "2022-04-22"
 thumbnail: '../../thumbnails/gd-exit.png'
 credit: "Foto: gettyimages"

@@ -2,7 +2,7 @@
 title: Hello World
 template: ["Post"]
 categories: ["Trivia"]
-tags: ["Manchester City", "Liga Inggris", "Pep Guardiola"]
+tags: ["Edu", "Tech", "Privacy"]
 date: "2015-05-01T22:12:03.284Z"
 description: "Hello World"
 thumbnail: '../../thumbnails/gd-aoud.png'
