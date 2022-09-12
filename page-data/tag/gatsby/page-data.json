@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tag-page-js",
+    "path": "/tag/gatsby",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Heri Setiawan Blog"}},"allMarkdownRemark":{"nodes":[{"excerpt":"This is how to publish update web in github pages! Step by step Update your content website. Commit your update to git local (git add .) and…","fields":{"slug":"/how-to-publish-in-github-pages/"},"frontmatter":{"date":"September 12, 2022","title":"How To Publish In Github Pages","description":null}}]}},"pageContext":{"tag":"Gatsby"}},
+    "staticQueryHashes": ["3343187749"]}
