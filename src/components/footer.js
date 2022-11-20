@@ -7,13 +7,36 @@ const Footer = ({ onUpdateTheme, theme }) => (
     <div className="footer">
       <div className="footer-list">
         <span>
-          Powered by <a href="https://www.gatsbyjs.com">Gatsby</a>, Hosted by{" "}
-          <a href="https://www.vercel.com">Github Pages</a>.
+          Powered by{" "}
+          <a
+            href="https://www.gatsbyjs.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GatsbyJS
+          </a>
+          . Hosted by{" "}
+          <a
+            href="https://www.github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Github Pages
+          </a>
+          .
         </span>
       </div>
       <div className="footer-list">
         <span>
-          <a href="https://www.github.com/heriswn">© Heriswn</a>,{` `}
+          2022 ©{" "}
+          <a
+            href="https://www.github.com/heriswn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Heriswn
+          </a>
+          .{` `}
           All rights reserved.
         </span>
       </div>

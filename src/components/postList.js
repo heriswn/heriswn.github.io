@@ -10,6 +10,7 @@ export default class PostListing extends Component {
           idUnique: postEdge.id,
           path: postEdge.fields.slug,
           title: postEdge.frontmatter.title,
+          read: postEdge.timeToRead,
           date: postEdge.frontmatter.date,
           description: postEdge.frontmatter.description || postEdge.excerpt,
         }
@@ -42,7 +43,7 @@ export default class PostListing extends Component {
                     </Link>
                   </h2>
                   <p>
-                    <small>{post.date}</small>
+                    <small>{post.date}</small> • <small>{post.read} min read</small>
                   </p>
                 </div>
               </header>

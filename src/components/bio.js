@@ -47,7 +47,13 @@ const Bio = () => {
           {author?.summary || null}
           {` `}
           You should follow them on {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>Twitter</a>
+          <a
+            href={`https://twitter.com/${social?.twitter || ``}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Twitter
+          </a>
         </p>
       )}
     </div>
