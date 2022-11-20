@@ -24,8 +24,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/content/articles`,
         name: `articles`,
+        path: `${__dirname}/src/content/articles`,
       },
     },
     {
@@ -52,28 +52,11 @@ module.exports = {
             },
           },
           `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
         ],
       },
     },
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          `gatsby-remark-autolink-headers`,
-          `gatsby-remark-prismjs`
-        ],
-      },
-    },
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: `ADD YOUR TRACKING ID HERE`,
-    //   },
-    // },
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -141,9 +124,5 @@ module.exports = {
         icon: `src/assets/icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-react-helmet`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }
