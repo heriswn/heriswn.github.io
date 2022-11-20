@@ -1,5 +1,6 @@
 ---
 title: My Second Post!
+author: Admin
 template: ["Post"]
 categories: ["Articles"]
 tags: ["Edu", "Tech"]

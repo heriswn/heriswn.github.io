@@ -29,18 +29,20 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header>
           {/* <ToC headings={post.headings} /> */}
-          <div className="category">
-            {post.frontmatter.categories.map((cat, index) => (
-              <Link key={index} to={`/category/${slugify(cat)}`}>
-                {cat}
-              </Link>
-            ))}
-          </div>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.description || post.excerpt}</p>
-          <p>
-            <small>{post.frontmatter.date}</small>
-          </p>
+          <div className="meta">
+            <span>
+              {post.frontmatter.author}, {post.frontmatter.date} •
+            </span>
+            <span className="category">
+              {post.frontmatter.categories.map((cat, index) => (
+                <Link key={index} to={`/category/${slugify(cat)}`}>
+                  {cat}
+                </Link>
+              ))}
+            </span>
+          </div>
           <div>
             <GatsbyImage
               image={post.frontmatter.thumbnail.childImageSharp.gatsbyImageData}
@@ -121,6 +123,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        author
         date(formatString: "MMMM DD, YYYY")
         description
         categories
@@ -129,10 +132,7 @@ export const pageQuery = graphql`
         thumbnail {
           publicURL
           childImageSharp {
-            gatsbyImageData(
-              width: 700
-              placeholder: BLURRED
-            )
+            gatsbyImageData(width: 700, placeholder: BLURRED)
           }
         }
       }

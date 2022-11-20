@@ -1,5 +1,6 @@
 ---
 title: Hello World
+author: Admin
 template: ["Post"]
 categories: ["Trivia"]
 tags: ["Edu", "Tech", "Privacy"]

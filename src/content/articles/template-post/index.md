@@ -1,5 +1,6 @@
 ---
 title: Template Post!
+author: Admin
 template: ["Post"]
 categories: ["Articles"]
 tags: ["Edu", "Docs", "Cybersecurity"]

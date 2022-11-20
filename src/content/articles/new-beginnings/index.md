@@ -1,5 +1,6 @@
 ---
 title: New Beginnings
+author: Admin
 template: ["Post"]
 categories: ["Articles"]
 tags: ["Edu", "Privacy"]

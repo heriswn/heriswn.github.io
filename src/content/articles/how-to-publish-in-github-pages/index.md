@@ -1,5 +1,6 @@
 ---
 title: How To Publish In Github Pages
+author: Admin
 template: ["Post"]
 categories: ["Articles"]
 tags: ["Website", "Github", "Gatsby"]
