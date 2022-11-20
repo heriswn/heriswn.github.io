@@ -11,7 +11,6 @@
   --background-color: #fff;
   --primary: #6b76f3;
   --navbar-color: #f0f0f0;
-  --sidebar-color-hover: #dedede;
   --reverse: var(--background-color);
   --scrollbar: var(--navbar-color);
   --scrollbar-track: var(--sidebar-color-hover);

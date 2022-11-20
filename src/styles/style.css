@@ -65,7 +65,6 @@
   --background-color: #282c34;
   --primary: #fdb54a;
   --navbar-color: #1c1e24;
-  --sidebar-color-hover: #464e5f;
   --reverse: var(--background-color);
   --scrollbar: var(--navbar-color);
   --scrollbar-track: var(--sidebar-color-hover);
@@ -276,18 +275,6 @@ tbody tr:last-child td:last-of-type {
 
 a {
   color: var(--color-primary);
-  font-weight: 700;
-  text-decoration: 2px underline var(--primary);
-}
-
-a:hover {
-  background: var(--primary);
-  color: var(--color-link);
-  text-decoration: 2px underline var(--primary);
-}
-
-a:focus {
-  text-decoration: 2px underline var(--primary);
 }
 
 /* Custom classes */
@@ -403,10 +390,6 @@ a:focus {
   font-weight: var(--fontWeight-bold);
   font-family: var(--font-heading);
   font-size: var(--fontSize-2);
-}
-
-.header-link-home:hover {
-  text-decoration: none;
 }
 
 .bio {
