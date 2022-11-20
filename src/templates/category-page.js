@@ -30,6 +30,7 @@ export const pageQuery = graphql`
       filter: { frontmatter: { categories: { eq: $category } } }
     ) {
       nodes {
+        id
         excerpt
         fields {
           slug

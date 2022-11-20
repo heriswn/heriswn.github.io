@@ -7,6 +7,7 @@ export default class PostListing extends Component {
     const postList = postEdges
       .map(postEdge => {
         return {
+          id: postEdge.id,
           path: postEdge.fields.slug,
           title: postEdge.frontmatter.title,
           date: postEdge.frontmatter.date,
@@ -33,7 +34,7 @@ export default class PostListing extends Component {
                   <h2>
                     <Link
                       to={post.path}
-                      key={post.title}
+                      key={post.id}
                       itemProp="url"
                       className="postList-link"
                     >
