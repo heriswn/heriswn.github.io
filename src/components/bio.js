@@ -36,11 +36,18 @@ const Bio = () => {
       />
       {author?.name && (
         <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
+          Written by{" "}
+          <a
+            href="https://herisetiawan.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>{author.name}</strong>
+          </a>{" "}
+          {author?.summary || null}
           {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter
-          </a>
+          You should follow them on {` `}
+          <a href={`https://twitter.com/${social?.twitter || ``}`}>Twitter</a>
         </p>
       )}
     </div>

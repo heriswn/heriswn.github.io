@@ -11,7 +11,9 @@ const CategoryPageTemplate = ({ data, location, pageContext }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo location={location} title={pageContext?.category} />
-      <h1>{pageContext?.category}</h1>
+      <h1>
+        <span className="category-tag">{pageContext?.category}</span>
+      </h1>
       <PostListing postEdges={posts} />
     </Layout>
   )

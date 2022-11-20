@@ -12,7 +12,7 @@ const TagPageTemplate = ({ data, location, pageContext }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo location={location} title={tag} />
-      <h1>#{tag}</h1>
+        <h1><span className="category-tag">#{tag}</span></h1>
       <PostListing postEdges={posts} />
     </Layout>
   )
