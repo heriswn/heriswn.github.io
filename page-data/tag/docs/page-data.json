@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-templates-tag-page-js",
-    "path": "/tag/docs",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Heri Setiawan Blog"}},"allMarkdownRemark":{"nodes":[{"excerpt":"This is a Template for Articles Post! First Section This is how section 1st look like! Read More How To Deploy a GatsbyJS Blog on Github…","fields":{"slug":"/template-post/"},"frontmatter":{"date":"April 22, 2022","title":"Template Post!","description":null}}]}},"pageContext":{"tag":"Docs"}},
-    "staticQueryHashes": ["3343187749"]}
+{"componentChunkName":"component---src-templates-tag-page-js","path":"/tag/docs","result":{"data":{"site":{"siteMetadata":{"title":"Heri Setiawan Blog"}},"allMarkdownRemark":{"nodes":[{"excerpt":"This is a Template for Articles Post! First Section This is how section 1st look like! Read More How To Deploy a GatsbyJS Blog on Github…","fields":{"slug":"/template-post/"},"frontmatter":{"date":"April 22, 2022","title":"Template Post!","description":null}}]}},"pageContext":{"tag":"Docs"}},"staticQueryHashes":["3343187749"]}
