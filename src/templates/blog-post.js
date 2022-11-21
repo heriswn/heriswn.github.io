@@ -131,7 +131,7 @@ export const pageQuery = graphql`
         thumbnail {
           publicURL
           childImageSharp {
-            gatsbyImageData(width: 700, placeholder: BLURRED)
+            gatsbyImageData(width: 900, placeholder: BLURRED)
           }
         }
       }
