@@ -283,6 +283,79 @@ a:hover {
   transition: 0.1s ease-in;
 }
 
+.main-heading a {
+  font-size: var(--fontSize-7);
+  color: var(--color-text);
+  border-bottom: 2px solid transparent;
+  background: #06966A;
+  background: -webkit-linear-gradient(left, #06966A, #2563EB);
+  background: -moz-linear-gradient(left, #06966A, #2563EB);
+  background: linear-gradient(to right, #06966A, #2563EB);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.6;
+}
+
+.main-heading a:hover {
+  background-color: transparent;
+  color: var(--color-text);
+}
+
+a.postList-link {
+  border-bottom: 2px solid transparent;
+}
+
+.postList-link:hover {
+  /* Created with https://www.css-gradient.com */
+  background: #06966A;
+  background: -webkit-linear-gradient(left, #06966A, #2563EB);
+  background: -moz-linear-gradient(left, #06966A, #2563EB);
+  background: linear-gradient(to right, #06966A, #2563EB);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.header-home a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  border-bottom: 2px solid var(--primary);
+}
+
+.header-home a:hover {
+  background-color: var(--primary);
+  color: var(--color-link);
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+span.category a {
+  font-weight: 600;
+  color: var(--color-text-light);
+  text-decoration: none;
+  border-bottom: 2px solid var(--primary);
+}
+
+span.category a:hover {
+  background-color: var(--primary);
+  color: var(--color-link);
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.tag a {
+  text-decoration: none;
+  border-bottom: 2px solid var(--primary);
+}
+
+.tag a:hover {
+  background-color: var(--primary);
+  color: var(--color-link);
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
 /* Custom classes */
 
 .global-wrapper {
@@ -297,36 +370,6 @@ a:hover {
 
 .global-header {
   margin-bottom: var(--spacing-12);
-}
-
-.main-heading {
-  font-size: var(--fontSize-7);
-  color: var(--color-text);
-  margin: 0;
-}
-
-h1.main-heading a {
-  border-bottom: 2px solid transparent;
-  background: #06966A;
-  background: -webkit-linear-gradient(left, #06966A, #2563EB);
-  background: -moz-linear-gradient(left, #06966A, #2563EB);
-  background: linear-gradient(to right, #06966A, #2563EB);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 0.6;
-}
-
-h1.main-heading a:hover {
-  background-color: transparent;
-  color: var(--color-text);
-}
-
-.main-heading :hover {
-  text-decoration: none;
-}
-
-.main-heading :focus {
-  text-decoration: none;
 }
 
 .post-list-item {
@@ -345,24 +388,8 @@ h1.main-heading a:hover {
   margin-top: var(--spacing-0);
 }
 
-a.postList-link {
-  border-bottom: 2px solid transparent;
-}
-
 .post-list-item time {
   color: var(--color-text);
-}
-
-.postList-link:hover {
-  /* Created with https://www.css-gradient.com */
-  background: #06966A;
-  background: -webkit-linear-gradient(left, #06966A, #2563EB);
-  background: -moz-linear-gradient(left, #06966A, #2563EB);
-  background: linear-gradient(to right, #06966A, #2563EB);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 0.6;
-  transition: 0.3s;
 }
 
 .post-list-item header {
@@ -407,19 +434,6 @@ a.postList-link {
   display: flex;
   list-style: none;
   gap: var(--spacing-2);
-}
-
-.header-home a {
-  color: var(--color-text-light);
-  text-decoration: none;
-  border-bottom: 2px solid var(--primary);
-}
-
-.header-home a:hover {
-  background-color: var(--primary);
-  color: var(--color-link);
-  opacity: 0.7;
-  transition: 0.3s;
 }
 
 .header-link-home {
@@ -487,38 +501,12 @@ span.category {
   margin-left: var(--spacing-1);
 }
 
-span.category a {
-  font-weight: 600;
-  color: var(--color-text-light);
-  text-decoration: none;
-  border-bottom: 2px solid var(--primary);
-}
-
-span.category a:hover{
-  background-color: var(--primary);
-  color: var(--color-link);
-  opacity: 0.7;
-  transition: 0.3s;
-}
-
 /* Tag */
 .tag {
   display: flex;
   list-style: none;
   gap: var(--spacing-2);
   margin-bottom: var(--spacing-5);
-}
-
-.tag a {
-  text-decoration: none;
-  border-bottom: 2px solid var(--primary);
-}
-
-.tag a:hover {
-  background-color: var(--primary);
-  color: var(--color-link);
-  opacity: 0.7;
-  transition: 0.3s;
 }
 
 .category-tag {
@@ -567,6 +555,7 @@ span.category a:hover{
   margin-left: 0;
   min-width: auto;
   margin-right: -0.5rem;
+  transition: 0.3s;
 }
 
 .theme-switcher img {
