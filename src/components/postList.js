@@ -43,7 +43,8 @@ export default class PostListing extends Component {
                     </Link>
                   </h2>
                   <p>
-                    <small>{post.date}</small> • <small>{post.read} min read</small>
+                    <small>{post.date}</small> •{" "}
+                    <small>{post.read} min read</small>
                   </p>
                 </div>
               </header>
@@ -54,6 +55,9 @@ export default class PostListing extends Component {
                   }}
                   itemProp="description"
                 />
+                <Link to={post.path} key={post.idUnique} itemProp="url">
+                  <span itemProp="headline">Read More →</span>
+                </Link>
               </div>
             </article>
           )

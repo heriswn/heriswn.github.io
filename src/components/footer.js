@@ -13,7 +13,7 @@ const Footer = ({ onUpdateTheme, theme }) => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            GatsbyJS
+            Gatsby
           </a>
           . Hosted by{" "}
           <a

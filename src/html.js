@@ -11,6 +11,9 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <meta http-equiv="CACHE-CONTROL" CONTENT="NO-CACHE" />
+        <meta http-equiv="PRAGMA" CONTENT="NO-CACHE" />
+        <meta http-equiv="EXPIRES" CONTENT="Mon, 22 Oct 2045 11:12:01 GMT" />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
