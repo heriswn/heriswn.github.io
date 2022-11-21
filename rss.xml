@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Heri Setiawan Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://heriswn.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 21 Nov 2022 12:12:12 GMT</lastBuildDate><item><title><![CDATA[How To Publish In Github Pages]]></title><description><![CDATA[This is how to publish update web in github pages! Step by step Update your content website. Commit your update to git local (git add .) and…]]></description><link>https://heriswn.github.io/how-to-publish-in-github-pages/</link><guid isPermaLink="false">https://heriswn.github.io/how-to-publish-in-github-pages/</guid><pubDate>Mon, 12 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;This is how to publish update web in github pages!&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Heri Setiawan Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://heriswn.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 21 Nov 2022 13:34:16 GMT</lastBuildDate><item><title><![CDATA[How To Publish In Github Pages]]></title><description><![CDATA[This is how to publish update web in github pages! Step by step Update your content website. Commit your update to git local (git add .) and…]]></description><link>https://heriswn.github.io/how-to-publish-in-github-pages/</link><guid isPermaLink="false">https://heriswn.github.io/how-to-publish-in-github-pages/</guid><pubDate>Mon, 12 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;This is how to publish update web in github pages!&lt;/h1&gt;
 &lt;h2&gt;Step by step&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Update your content website.&lt;/li&gt;
@@ -143,26 +143,25 @@ firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/e1596/egg.jpg&quot;
+    href=&quot;/static/7479dee46f86d727413e02683c8a9eb3/c1b63/default.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAEEBf/aAAwDAQACEAMQAAABgik0dWC//8QAGRABAAMBAQAAAAAAAAAAAAAAAQACERJC/9oACAEBAAEFAkqW7B5Zovtvk//EABcRAQADAAAAAAAAAAAAAAAAAAAREkH/2gAIAQMBAT8B1WX/xAAWEQEBAQAAAAAAAAAAAAAAAAAAESL/2gAIAQIBAT8BjT//xAAbEAABBAMAAAAAAAAAAAAAAAAAAQIRISIxMv/aAAgBAQAGPwK9GNocyS8hCj//xAAaEAADAQEBAQAAAAAAAAAAAAAAAREhQYGx/9oACAEBAAE/IXOrA43oOyg9wgU86OZMfwZKypT/2gAMAwEAAgADAAAAEMjv/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARIf/aAAgBAwEBPxARwyusv//EABcRAQEBAQAAAAAAAAAAAAAAAAEAIVH/2gAIAQIBAT8QOoVoX//EAB0QAQEAAgIDAQAAAAAAAAAAAAERADFhgSFB0eH/2gAIAQEAAT8QSpwaGjrBSrtHyF9iY8RpUnGRBGqtOcsiDE6fM3AgiXf5M//Z&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 52.53164556962025%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGUlEQVQoz2N4+VT+PzUxw6iBowaOGkiEgQAivILvITAr4AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;test&quot;
-        title=&quot;test&quot;
-        src=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/828fb/egg.jpg&quot;
-        srcset=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/ff44c/egg.jpg 158w,
-/static/8058f3f26913fea3b6a89a73344fe94a/a6688/egg.jpg 315w,
-/static/8058f3f26913fea3b6a89a73344fe94a/828fb/egg.jpg 630w,
-/static/8058f3f26913fea3b6a89a73344fe94a/0ede0/egg.jpg 945w,
-/static/8058f3f26913fea3b6a89a73344fe94a/3ac88/egg.jpg 1260w,
-/static/8058f3f26913fea3b6a89a73344fe94a/e1596/egg.jpg 2048w&quot;
+        alt=&quot;Default&quot;
+        title=&quot;Default&quot;
+        src=&quot;/static/7479dee46f86d727413e02683c8a9eb3/f058b/default.png&quot;
+        srcset=&quot;/static/7479dee46f86d727413e02683c8a9eb3/c26ae/default.png 158w,
+/static/7479dee46f86d727413e02683c8a9eb3/6bdcf/default.png 315w,
+/static/7479dee46f86d727413e02683c8a9eb3/f058b/default.png 630w,
+/static/7479dee46f86d727413e02683c8a9eb3/40601/default.png 945w,
+/static/7479dee46f86d727413e02683c8a9eb3/c1b63/default.png 1200w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
