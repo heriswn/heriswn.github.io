@@ -97,7 +97,7 @@ footer {
 }
 
 hr {
-  background: var(--color-accent);
+  background: var(--primary);
   height: 2px;
   border: 0;
 }
@@ -503,17 +503,6 @@ span.category a:hover{
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0.6;
-}
-
-/* ToC */
-.ul-toc {
-  position: fixed;
-  padding: 0.75rem;
-  width: 20rem;
-  top: auto;
-  max-height: 30vh;
-  list-style: none;
-  left: calc(50% + 350px);
 }
 
 /* break-line */
