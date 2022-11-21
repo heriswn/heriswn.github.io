@@ -27,15 +27,14 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
-      filter: { frontmatter: { tags: { eq: $tag } } }
-    ) {
+    allMarkdownRemark(filter: { frontmatter: { tags: { eq: $tag } } }) {
       nodes {
         id
         excerpt
         fields {
           slug
         }
+        timeToRead
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
           title
