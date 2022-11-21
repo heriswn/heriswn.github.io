@@ -274,14 +274,13 @@ tbody tr:last-child td:last-of-type {
 /* Link */
 
 a {
-  color: var(--color-text-light);
+  color: var(--primary);
   text-decoration: none;
-  border-bottom: 2px solid var(--primary);
 }
 
 a:hover {
-  background-color: var(--primary);
-  color: var(--color-link);
+  border-bottom: 2px solid var(--primary);
+  transition: 0.1s ease-in;
 }
 
 /* Custom classes */
@@ -410,6 +409,19 @@ a.postList-link {
   gap: var(--spacing-2);
 }
 
+.header-home a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  border-bottom: 2px solid var(--primary);
+}
+
+.header-home a:hover {
+  background-color: var(--primary);
+  color: var(--color-link);
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
 .header-link-home {
   font-weight: var(--fontWeight-bold);
   font-family: var(--font-heading);
@@ -485,6 +497,8 @@ span.category a {
 span.category a:hover{
   background-color: var(--primary);
   color: var(--color-link);
+  opacity: 0.7;
+  transition: 0.3s;
 }
 
 /* Tag */
@@ -493,6 +507,18 @@ span.category a:hover{
   list-style: none;
   gap: var(--spacing-2);
   margin-bottom: var(--spacing-5);
+}
+
+.tag a {
+  text-decoration: none;
+  border-bottom: 2px solid var(--primary);
+}
+
+.tag a:hover {
+  background-color: var(--primary);
+  color: var(--color-link);
+  opacity: 0.7;
+  transition: 0.3s;
 }
 
 .category-tag {
