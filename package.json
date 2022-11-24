@@ -2,7 +2,7 @@
   "name": "heriswn.github.io",
   "private": true,
   "description": "A starter for a blog powered by Gatsby and Markdown",
-  "version": "0.2.2",
+  "version": "1.0.0",
   "author": "Heri Setiawan <herisetiawan@duck.com>",
   "bugs": {
     "url": "https://github.com/heriswn/heriswn.github.io/issues"
