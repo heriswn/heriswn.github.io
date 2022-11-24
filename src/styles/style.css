@@ -412,7 +412,7 @@ a:hover {
   margin-bottom: var(--spacing-5);
 }
 
-.blog-post header h1 {
+.blog-post header h1 span {
   background: #06966A;
   background: -webkit-linear-gradient(left, #06966A, #2563EB);
   background: -moz-linear-gradient(left, #06966A, #2563EB);
