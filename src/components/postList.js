@@ -37,7 +37,7 @@ export default class PostListing extends Component {
                       to={post.path}
                       key={post.idUnique}
                       itemProp="url"
-                      className="postList-link"
+                      className="postList-header"
                     >
                       <span itemProp="headline">{post.title}</span>
                     </Link>
@@ -55,9 +55,11 @@ export default class PostListing extends Component {
                   }}
                   itemProp="description"
                 />
-                <Link to={post.path} key={post.idUnique} itemProp="url">
-                  <span itemProp="headline">Read More →</span>
-                </Link>
+                <div className="main-bottom">
+                  <Link to={post.path} key={post.idUnique} itemProp="url">
+                    <span itemProp="headline">Read More →</span>
+                  </Link>
+                </div>
               </div>
             </article>
           )

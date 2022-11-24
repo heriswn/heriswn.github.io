@@ -27,20 +27,23 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          {/* <ToC headings={post.headings} /> */}
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.description || post.excerpt}</p>
           <div className="meta">
-            <span>
-              {post.frontmatter.author}, {post.frontmatter.date} •
-            </span>
-            <span className="category">
-              {post.frontmatter.categories.map((cat, index) => (
-                <Link key={index} to={`/category/${slugify(cat)}`}>
-                  {cat}
-                </Link>
-              ))}
-            </span>
+            <div>
+              <span>
+                {post.frontmatter.author}, {post.frontmatter.date} •
+              </span>
+            </div>
+            <div>
+              <span className="main-bottom">
+                {post.frontmatter.categories.map((cat, index) => (
+                  <Link key={index} to={`/category/${slugify(cat)}`}>
+                    {cat}
+                  </Link>
+                ))}
+              </span>
+            </div>
           </div>
           <div>
             <GatsbyImage
@@ -55,9 +58,9 @@ const BlogPostTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <div className="tag">
+        <div className="meta">
           {post.frontmatter.tags.map((tagIndex, index) => (
-            <li key={index}>
+            <li key={index} className="main-bottom">
               <Link to={`/tag/${slugify(tagIndex)}`}>#{tagIndex}</Link>
             </li>
           ))}
