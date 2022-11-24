@@ -32,16 +32,13 @@ export default class PostListing extends Component {
             >
               <header>
                 <div>
-                  <h2>
-                    <Link
-                      to={post.path}
-                      key={post.idUnique}
-                      itemProp="url"
-                      className="postList-header"
-                    >
-                      <span itemProp="headline">{post.title}</span>
-                    </Link>
-                  </h2>
+                  <div className="custom-link-postlist">
+                    <h2>
+                      <Link to={post.path} key={post.idUnique} itemProp="url">
+                        <span itemProp="headline">{post.title}</span>
+                      </Link>
+                    </h2>
+                  </div>
                   <p>
                     <small>{post.date}</small> •{" "}
                     <small>{post.read} min read</small>

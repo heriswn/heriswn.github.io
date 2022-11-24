@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import PostListing from "../components/postList"
@@ -12,7 +12,11 @@ const TagPageTemplate = ({ data, location, pageContext }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo location={location} title={tag} />
-        <h1><span className="category-tag">#{tag}</span></h1>
+      <div className="custom-link">
+        <h1>
+          <Link to="#">#{tag}</Link>
+        </h1>
+      </div>
       <PostListing postEdges={posts} />
     </Layout>
   )

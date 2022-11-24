@@ -291,35 +291,24 @@ a:hover {
 }
 
 .custom-link a {
-  color: var(--color-text);
-  border-bottom: 2px solid transparent;
+  /* color: var(--color-text); */
   background: #06966A;
   background: -webkit-linear-gradient(left, #06966A, #2563EB);
   background: -moz-linear-gradient(left, #06966A, #2563EB);
   background: linear-gradient(to right, #06966A, #2563EB);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 0.6;
+  border-bottom: none;
 }
 
-.custom-link a:hover {
-  background-color: transparent;
-  color: var(--color-text);
-}
-
-a.postList-header {
-  border-bottom: 2px solid transparent;
-}
-
-.postList-header:hover {
-  /* Created with https://www.css-gradient.com */
+.custom-link-postlist a:hover {
   background: #06966A;
   background: -webkit-linear-gradient(left, #06966A, #2563EB);
   background: -moz-linear-gradient(left, #06966A, #2563EB);
   background: linear-gradient(to right, #06966A, #2563EB);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 0.6;
+  border-bottom: none;
   transition: 0.3s;
 }
 
@@ -462,16 +451,6 @@ a.postList-header {
   display: flex;
   list-style: none;
   margin-bottom: var(--spacing-5);
-}
-
-.category-tag {
-  background: #06966A;
-  background: -webkit-linear-gradient(left, #06966A, #2563EB);
-  background: -moz-linear-gradient(left, #06966A, #2563EB);
-  background: linear-gradient(to right, #06966A, #2563EB);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 0.6;
 }
 
 /* break-line */
