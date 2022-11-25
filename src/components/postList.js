@@ -55,10 +55,10 @@ export default class PostListing extends Component {
                   }}
                   itemProp="description"
                 />
-                <p>
+                {/* <p>
                   <small>{post.date}</small> •{" "}
                   <small>{post.read} min read</small>
-                </p>
+                </p> */}
               </div>
             </article>
           )
