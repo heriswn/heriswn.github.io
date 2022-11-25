@@ -54,7 +54,6 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #fdb54a;
   --color-link: #222;
   --color-text: #d0d5df;
   --color-text-light: #fff;
@@ -65,6 +64,7 @@
   --background-color: #282c34;
   --primary: #fdb54a;
   --navbar-color: #1c1e24;
+  --sidebar-color-hover: #383838;
   --reverse: var(--background-color);
   --scrollbar: var(--navbar-color);
   --scrollbar-track: var(--sidebar-color-hover);
@@ -84,6 +84,33 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 } */
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: var(--scrollbar);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-track);
+  border-radius: 0;
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--reverse);
+}
+
+::-moz-selection {
+  background: var(--primary);
+  color: var(--reverse);
+}
+
+::marker {
+  color: var(--primary);
+}
 
 body {
   font-family: var(--font-body);
@@ -329,8 +356,16 @@ a:hover {
 }
 
 .post-list-item {
-  margin-bottom: var(--spacing-8);
-  margin-top: var(--spacing-8);
+  padding: 5px;
+  margin-bottom: var(--spacing-5);
+  margin-top: var(--spacing-5);
+}
+
+.post-list-item:hover {
+  background-color: var(--sidebar-color-hover);
+  border-radius: 4px;
+  padding: 5px;
+  transition: 0.2s;
 }
 
 .post-list-item p {
@@ -352,34 +387,6 @@ a:hover {
   margin-bottom: var(--spacing-4);
 }
 
-/* Scrollbar */
-
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-  background: var(--scrollbar);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-track);
-  border-radius: 0;
-}
-
-::selection {
-  background: var(--primary);
-  color: var(--reverse);
-}
-
-::-moz-selection {
-  background: var(--primary);
-  color: var(--reverse);
-}
-
-::marker {
-  color: var(--primary);
-}
-
-/* Header */
 .header-home {
   align-items: center;
   display: flex;
@@ -457,7 +464,7 @@ a:hover {
 .break-line {
   width: 6rem;
   height: 0.125rem;
-  background-color: var(--color-primary);
+  background-color: var(--primary);
 }
 
 /* footer */

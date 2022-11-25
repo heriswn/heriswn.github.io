@@ -39,10 +39,13 @@ export default class PostListing extends Component {
                       </Link>
                     </h2>
                   </div>
-                  <p>
-                    <small>{post.date}</small> •{" "}
-                    <small>{post.read} min read</small>
-                  </p>
+                  <div>
+                    <Link to={post.path} key={post.idUnique} itemProp="url">
+                      <span itemProp="headline">
+                        https://heriswn.github.io{post.path}
+                      </span>
+                    </Link>
+                  </div>
                 </div>
               </header>
               <div>
@@ -52,11 +55,10 @@ export default class PostListing extends Component {
                   }}
                   itemProp="description"
                 />
-                <div className="main-bottom">
-                  <Link to={post.path} key={post.idUnique} itemProp="url">
-                    <span itemProp="headline">Read More →</span>
-                  </Link>
-                </div>
+                <p>
+                  <small>{post.date}</small> •{" "}
+                  <small>{post.read} min read</small>
+                </p>
               </div>
             </article>
           )
