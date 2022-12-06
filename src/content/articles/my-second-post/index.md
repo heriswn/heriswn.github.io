@@ -5,7 +5,7 @@ template: ["Post"]
 categories: ["Articles"]
 tags: ["Edu", "Tech"]
 date: "2015-05-06T23:46:37.121Z"
-thumbnail: '../../thumbnails/gd-exit.png'
+thumbnail: '../../thumbnails/default.png'
 credit: "Foto: gettyimages"
 ---
 

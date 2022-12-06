@@ -5,7 +5,7 @@ template: ["Post"]
 categories: ["Articles"]
 tags: ["Edu", "Docs", "Cybersecurity"]
 date: "2022-04-22"
-thumbnail: '../../thumbnails/gd-exit.png'
+thumbnail: '../../thumbnails/default.png'
 credit: "Foto: gettyimages"
 ---
 
