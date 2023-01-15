@@ -39,17 +39,15 @@ export default class PostListing extends Component {
                       </Link>
                     </h2>
                   </div>
-                  <div>
-                    <Link to={post.path} key={post.idUnique} itemProp="url">
-                      <span itemProp="headline">
-                        https://heriswn.github.io{post.path}
-                      </span>
-                    </Link>
-                  </div>
+                  <Link to={post.path} key={post.idUnique} itemProp="url">
+                    <small itemProp="headline">
+                      https://heriswn.github.io{post.path}
+                    </small>
+                  </Link>
                 </div>
               </header>
               <div>
-                <p>
+                <p style={{marginBottom: "3px"}}>
                   <small>
                     <i>{post.date}</i>
                   </small>{" "}
