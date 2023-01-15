@@ -49,16 +49,21 @@ export default class PostListing extends Component {
                 </div>
               </header>
               <div>
+                <p>
+                  <small>
+                    <i>{post.date}</i>
+                  </small>{" "}
+                  •{" "}
+                  <small>
+                    <i>{post.read} min read</i>
+                  </small>
+                </p>
                 <p
                   dangerouslySetInnerHTML={{
                     __html: post.description,
                   }}
                   itemProp="description"
                 />
-                {/* <p>
-                  <small>{post.date}</small> •{" "}
-                  <small>{post.read} min read</small>
-                </p> */}
               </div>
             </article>
           )
