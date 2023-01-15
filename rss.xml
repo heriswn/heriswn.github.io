@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Heri Setiawan Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://heriswn.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 15 Jan 2023 22:35:04 GMT</lastBuildDate><item><title><![CDATA[How To Publish In Github Pages]]></title><description><![CDATA[This is how to publish update web in github pages! Step by step Update your content website. Commit your update to git local (git add .) and…]]></description><link>https://heriswn.github.io/how-to-publish-in-github-pages/</link><guid isPermaLink="false">https://heriswn.github.io/how-to-publish-in-github-pages/</guid><pubDate>Tue, 12 Sep 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;This is how to publish update web in github pages!&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Heri Setiawan Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://heriswn.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 15 Jan 2023 22:40:38 GMT</lastBuildDate><item><title><![CDATA[How To Go Back To A Previous Commit]]></title><description><![CDATA[This is how to go back to a previous commit! Step by step Go to github, check commit id. Checkout in the local git (" git checkout id-commit…]]></description><link>https://heriswn.github.io/how-to-go-back-to-a-previous-commit/</link><guid isPermaLink="false">https://heriswn.github.io/how-to-go-back-to-a-previous-commit/</guid><pubDate>Mon, 16 Jan 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;This is how to go back to a previous commit!&lt;/h1&gt;
+&lt;h2&gt;Step by step&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to github, check commit id.&lt;/li&gt;
+&lt;li&gt;Checkout in the local git (&quot; git checkout id-commit . &quot;). DON&apos;T FORGET DOT IN FINAL&lt;/li&gt;
+&lt;li&gt;Commit your update (&quot; git add . &quot;) and then ( git commit -m &quot;back to a previous commit&quot; ).&lt;/li&gt;
+&lt;li&gt;Push to github server (git push).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Read More&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/swlh/using-git-how-to-go-back-to-a-previous-commit-8579ccc8180f&quot;&gt;How To Go Back To A Previous Commit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[How To Publish In Github Pages]]></title><description><![CDATA[This is how to publish update web in github pages! Step by step Update your content website. Commit your update to git local (git add .) and…]]></description><link>https://heriswn.github.io/how-to-publish-in-github-pages/</link><guid isPermaLink="false">https://heriswn.github.io/how-to-publish-in-github-pages/</guid><pubDate>Mon, 12 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;This is how to publish update web in github pages!&lt;/h1&gt;
 &lt;h2&gt;Step by step&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Update your content website.&lt;/li&gt;
@@ -26,17 +37,6 @@
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.w3schools.com/CSSref/playdemo.asp?filename=playcss_accent-color&quot;&gt;Demo CSS w3schools&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[How To Go Back To A Previous Commit]]></title><description><![CDATA[This is how to go back to a previous commit! Step by step Go to github, check commit id. Checkout in the local git (" git checkout id-commit…]]></description><link>https://heriswn.github.io/how-to-go-back-to-a-previous-commit/</link><guid isPermaLink="false">https://heriswn.github.io/how-to-go-back-to-a-previous-commit/</guid><pubDate>Sun, 16 Jan 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;This is how to go back to a previous commit!&lt;/h1&gt;
-&lt;h2&gt;Step by step&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Go to github, check commit id.&lt;/li&gt;
-&lt;li&gt;Checkout in the local git (&quot; git checkout id-commit . &quot;). DON&apos;T FORGET DOT IN FINAL&lt;/li&gt;
-&lt;li&gt;Commit your update (&quot; git add . &quot;) and then ( git commit -m &quot;back to a previous commit&quot; ).&lt;/li&gt;
-&lt;li&gt;Push to github server (git push).&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;Read More&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://medium.com/swlh/using-git-how-to-go-back-to-a-previous-commit-8579ccc8180f&quot;&gt;How To Go Back To A Previous Commit&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in…]]></description><link>https://heriswn.github.io/new-beginnings/</link><guid isPermaLink="false">https://heriswn.github.io/new-beginnings/</guid><pubDate>Thu, 28 May 2015 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
