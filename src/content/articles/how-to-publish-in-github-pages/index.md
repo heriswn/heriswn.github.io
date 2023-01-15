@@ -4,7 +4,7 @@ author: Admin
 template: ["Post"]
 categories: ["Articles"]
 tags: ["Website", "Github", "Gatsby"]
-date: "2023-09-12"
+date: "2022-09-12"
 thumbnail: '../../thumbnails/web.jpg'
 credit: "Image by rawpixel.com on Freepik"
 ---
