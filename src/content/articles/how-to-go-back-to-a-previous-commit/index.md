@@ -15,8 +15,7 @@ credit: "Image by rawpixel.com on Freepik"
 
 1. Go to github, check commit id.
 2. Checkout in the local git (" git checkout id-commit . "). DON'T FORGET DOT IN FINAL
-3. (" git add . ").
-4. ( git commit -m "back to a previous commit" ).
+3. Commit your update (" git add . ") and then ( git commit -m "back to a previous commit" ).
 4. Push to github server (git push).
 
 ### Read More
