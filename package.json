@@ -28,7 +28,7 @@
     "typeface-montserrat": "1.1.13"
   },
   "devDependencies": {
-    "gh-pages": "4.0.0",
+    "gh-pages": "5.0.0",
     "prettier": "2.7.1"
   },
   "homepage": "https://github.com/gatsbyjs/heriswn.github.io#readme",
