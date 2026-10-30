@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pencatat Uang</title>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<style>
+:root{--bg:#f6f5f1;--card:#fff;--ink:#1c1c1a;--mute:#76746c;--line:#e4e1d8;--in:#157f4b;--out:#c23b2e;--acc:#1c1c1a;--accink:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--card:#1e1e1c;--ink:#f1efe8;--mute:#9a978c;--line:#323230;--in:#4cc788;--out:#f0776a;--acc:#f1efe8;--accink:#141413;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:640px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:20px;margin:0}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:16px}
+input,select,button{font:inherit;color:inherit}
+input,select{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;width:100%}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:14px}
+.sum{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.sum .card{margin:0}.sum .full{grid-column:1/-1}
+.lbl{font-size:12px;color:var(--mute);text-transform:uppercase;letter-spacing:.04em}
+.val{font-size:20px;font-weight:650;margin-top:2px}.full .val{font-size:26px}
+.in{color:var(--in)}.out{color:var(--out)}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px}
+.seg button{padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--card);cursor:pointer}
+.seg button.on{background:var(--acc);color:var(--accink);border-color:var(--acc)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.go{width:100%;padding:12px;border:0;border-radius:10px;background:var(--acc);color:var(--accink);font-weight:600;cursor:pointer}
+.go:disabled{opacity:.5}
+.ghost{background:none;border:1px solid var(--line);border-radius:10px;padding:8px 12px;cursor:pointer}
+.tx{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--line)}
+.tx:first-child{border-top:0}.tx small{color:var(--mute);display:block}
+.tx .r{text-align:right;display:flex;align-items:center;gap:10px}
+.del{border:0;background:none;color:var(--mute);cursor:pointer;font-size:18px;padding:2px 6px}
+.bar{height:6px;border-radius:3px;background:var(--line);margin:4px 0 10px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--out)}
+.cat{display:flex;justify-content:space-between;font-size:14px}
+.empty{color:var(--mute);text-align:center;padding:18px 0}
+h2{font-size:14px;margin:0 0 10px;color:var(--mute);font-weight:600}
+.acts{display:flex;gap:8px;margin-top:4px;flex-wrap:wrap}
+.msg{font-size:13px;color:var(--out);margin:0 0 12px;min-height:0}
+.note{font-size:13px;color:var(--mute)}
+#login{text-align:center;padding:50px 0}
+#login p{color:var(--mute);max-width:380px;margin:12px auto 20px}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div id="login">
+  <h1>Pencatat Uang</h1>
+  <p>Masuk dengan Google. Catatan lu disimpan di file spreadsheet milik lu sendiri di Google Drive. Aplikasi ini cuma bisa akses file yang dia buat, bukan seluruh Drive.</p>
+  <div id="loginMsg" class="msg"></div>
+  <button class="go" id="loginBtn" style="width:auto;padding:12px 28px">Masuk dengan Google</button>
+</div>
+
+<div id="app" hidden>
+  <div class="top">
+    <h1>Pencatat Uang</h1>
+    <input type="month" id="bulan" style="width:auto">
+  </div>
+  <div id="msg" class="msg"></div>
+
+  <div class="sum">
+    <div class="card full"><div class="lbl">Saldo bulan ini</div><div class="val" id="saldo">Rp 0</div></div>
+    <div class="card"><div class="lbl">Pemasukan</div><div class="val in" id="masuk">Rp 0</div></div>
+    <div class="card"><div class="lbl">Pengeluaran</div><div class="val out" id="keluar">Rp 0</div></div>
+  </div>
+
+  <div class="card">
+    <div class="seg">
+      <button type="button" id="tOut" class="on">Pengeluaran</button>
+      <button type="button" id="tIn">Pemasukan</button>
+    </div>
+    <div class="row2">
+      <input id="jumlah" inputmode="numeric" placeholder="Jumlah (Rp)" autocomplete="off">
+      <select id="kat"></select>
+    </div>
+    <div class="row2">
+      <input type="date" id="tgl">
+      <input id="cat" placeholder="Catatan (opsional)" maxlength="80">
+    </div>
+    <button class="go" id="simpan" type="button">Simpan</button>
+  </div>
+
+  <div class="card" id="rincian" hidden>
+    <h2>Pengeluaran per kategori</h2>
+    <div id="rincianList"></div>
+  </div>
+
+  <div class="card">
+    <h2>Transaksi</h2>
+    <div id="list"></div>
+    <div class="acts">
+      <a class="ghost" id="open" target="_blank" rel="noopener" style="text-decoration:none">Buka di Google Sheets</a>
+      <button class="ghost" id="csv" type="button">Ekspor CSV</button>
+      <button class="ghost" id="reset" type="button">Kosongkan semua</button>
+      <button class="ghost" id="out" type="button">Keluar</button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+// ====== ISI INI ======
+const CLIENT_ID="721256602029-ej39jb7np34l9cvnnanv81vhhl54vno6.apps.googleusercontent.com";
+// =====================
+const SCOPE="https://www.googleapis.com/auth/drive.file";
+const TITLE="Pencatat Uang",TAB="Transaksi";
+const SH="https://sheets.googleapis.com/v4/spreadsheets";
+const FLAG="pu-login",SKEY="pu-sheet-id";
+const KAT={out:["Makan","Transport","Tagihan","Belanja","Hiburan","Kesehatan","Lainnya"],in:["Gaji","Bonus","Usaha","Lainnya"]};
+const $=id=>document.getElementById(id);
+const rp=n=>"Rp "+Math.round(n).toLocaleString("id-ID");
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const today=()=>{const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
+const ls={get:k=>{try{return localStorage.getItem(k)}catch(e){return null}},set:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}},del:k=>{try{localStorage.removeItem(k)}catch(e){}}};
+
+let token=null,tokenExp=0,tc=null,waiters=[],sid=null,gid=null,tx=[],tipe="out",busy=false;
+
+/* ---------- auth ---------- */
+function showLogin(m){$("app").hidden=true;$("login").hidden=false;$("loginMsg").textContent=m||"";}
+function initAuth(){
+  if(CLIENT_ID.startsWith("ISI_")){showLogin("Client ID belum diisi di file ini.");return}
+  if(!(window.google&&google.accounts&&google.accounts.oauth2)){setTimeout(initAuth,200);return}
+  tc=google.accounts.oauth2.initTokenClient({
+    client_id:CLIENT_ID,scope:SCOPE,
+    callback:r=>{
+      if(r.error){fail("Login gagal: "+r.error);return}
+      token=r.access_token;tokenExp=Date.now()+(Number(r.expires_in||3600)-60)*1000;
+      ls.set(FLAG,"1");waiters.splice(0).forEach(w=>w.res(token));
+      if(!sid)start();
+    },
+    error_callback:e=>fail(e&&e.type==="popup_closed"?"":"Login gagal: "+((e&&e.type)||"error"))
+  });
+  if(ls.get(FLAG)==="1")tc.requestAccessToken({prompt:""});else showLogin();
+}
+function fail(m){waiters.splice(0).forEach(w=>w.rej(new Error("auth")));if(!sid)showLogin(m);else $("msg").textContent=m||"Sesi habis. Coba lagi."}
+function getToken(){
+  if(token&&Date.now()<tokenExp)return Promise.resolve(token);
+  return new Promise((res,rej)=>{waiters.push({res,rej});tc.requestAccessToken({prompt:""})});
+}
+$("loginBtn").onclick=()=>{if(tc)tc.requestAccessToken({prompt:""})};
+$("out").onclick=()=>{
+  if(token&&google.accounts.oauth2.revoke)google.accounts.oauth2.revoke(token,()=>{});
+  token=null;sid=null;gid=null;tx=[];ls.del(FLAG);showLogin("");
+};
+
+/* ---------- Google API ---------- */
+async function api(url,opt){
+  opt=opt||{};
+  const t=await getToken();
+  const r=await fetch(url,Object.assign({},opt,{headers:{Authorization:"Bearer "+t,"Content-Type":"application/json"}}));
+  if(!r.ok){const j=await r.json().catch(()=>({}));const e=new Error((j.error&&j.error.message)||("HTTP "+r.status));e.status=r.status;throw e}
+  return r.json();
+}
+async function ensureSheet(){
+  let id=ls.get(SKEY);
+  if(!id){
+    const q=encodeURIComponent("name='"+TITLE+"' and mimeType='application/vnd.google-apps.spreadsheet' and trashed=false");
+    const l=await api("https://www.googleapis.com/drive/v3/files?q="+q+"&fields=files(id)&orderBy=createdTime");
+    if(l.files&&l.files[0])id=l.files[0].id;
+  }
+  if(id){
+    try{
+      const m=await api(SH+"/"+id+"?fields=sheets.properties");
+      const s=m.sheets.find(x=>x.properties.title===TAB);
+      if(s){sid=id;gid=s.properties.sheetId;ls.set(SKEY,id);return}
+    }catch(e){if(e.status!==404&&e.status!==403)throw e}
+  }
+  const c=await api(SH,{method:"POST",body:JSON.stringify({properties:{title:TITLE},sheets:[{properties:{title:TAB,gridProperties:{frozenRowCount:1}}}]})});
+  sid=c.spreadsheetId;gid=c.sheets[0].properties.sheetId;
+  await api(SH+"/"+sid+"/values/"+TAB+"!A1:F1?valueInputOption=RAW",{method:"PUT",body:JSON.stringify({values:[["ID","Tanggal","Tipe","Kategori","Jumlah","Catatan"]]})});
+  ls.set(SKEY,sid);
+}
+const isoDate=v=>typeof v==="number"?new Date(Math.round((v-25569)*86400000)).toISOString().slice(0,10):String(v||"").slice(0,10);
+async function load(){
+  const r=await api(SH+"/"+sid+"/values/"+TAB+"!A2:F?valueRenderOption=UNFORMATTED_VALUE");
+  tx=(r.values||[]).filter(v=>v[0]!==undefined&&v[0]!=="").map(v=>({id:String(v[0]),d:isoDate(v[1]),t:v[2]==="Pemasukan"?"in":"out",k:String(v[3]||""),n:Number(v[4])||0,c:String(v[5]||"")}));
+  render();
+}
+async function start(){
+  $("login").hidden=true;$("app").hidden=false;$("msg").textContent="Memuat dari Google Sheets...";
+  try{await ensureSheet();$("open").href="https://docs.google.com/spreadsheets/d/"+sid;await load();$("msg").textContent=""}
+  catch(e){sid=null;$("msg").textContent="Gagal memuat: "+e.message}
+}
+async function run(fn){
+  if(busy||!sid)return;busy=true;$("simpan").disabled=true;$("msg").textContent="";
+  try{await fn();await load()}catch(e){$("msg").textContent="Gagal: "+e.message}
+  busy=false;$("simpan").disabled=false;
+}
+const addTx=o=>run(()=>api(SH+"/"+sid+"/values/"+TAB+"!A:F:append?valueInputOption=RAW&insertDataOption=INSERT_ROWS",{method:"POST",body:JSON.stringify({values:[[o.id,o.d,o.t==="in"?"Pemasukan":"Pengeluaran",o.k,o.n,o.c]]})}));
+const delTx=id=>run(async()=>{
+  const r=await api(SH+"/"+sid+"/values/"+TAB+"!A:A?valueRenderOption=UNFORMATTED_VALUE");
+  const i=(r.values||[]).findIndex((v,j)=>j>0&&String(v[0])===String(id));
+  if(i<0)return;
+  await api(SH+"/"+sid+":batchUpdate",{method:"POST",body:JSON.stringify({requests:[{deleteDimension:{range:{sheetId:gid,dimension:"ROWS",startIndex:i,endIndex:i+1}}}]})});
+});
+const resetAll=()=>run(()=>api(SH+"/"+sid+"/values/"+TAB+"!A2:F:clear",{method:"POST",body:"{}"}));
+
+/* ---------- UI ---------- */
+function fillKat(){$("kat").innerHTML=KAT[tipe].map(k=>"<option>"+k+"</option>").join("")}
+function setTipe(t){tipe=t;$("tOut").classList.toggle("on",t==="out");$("tIn").classList.toggle("on",t==="in");fillKat()}
+$("tOut").onclick=()=>setTipe("out");$("tIn").onclick=()=>setTipe("in");
+$("jumlah").addEventListener("input",e=>{const d=e.target.value.replace(/\D/g,"");e.target.value=d?Number(d).toLocaleString("id-ID"):""});
+$("simpan").onclick=()=>{
+  const n=Number($("jumlah").value.replace(/\D/g,""));
+  if(!n){$("jumlah").focus();return}
+  const d=$("tgl").value||today();
+  addTx({id:Date.now(),t:tipe,n,k:$("kat").value,d,c:$("cat").value.trim()});
+  $("jumlah").value="";$("cat").value="";
+  if(d.slice(0,7)!==$("bulan").value)$("bulan").value=d.slice(0,7);
+};
+$("bulan").onchange=render;
+function render(){
+  const b=$("bulan").value;
+  const rows=tx.filter(x=>x.d.slice(0,7)===b).sort((a,c)=>c.d.localeCompare(a.d)||Number(c.id)-Number(a.id));
+  const m=rows.filter(x=>x.t==="in").reduce((s,x)=>s+x.n,0);
+  const k=rows.filter(x=>x.t==="out").reduce((s,x)=>s+x.n,0);
+  $("masuk").textContent=rp(m);$("keluar").textContent=rp(k);
+  const s=m-k;$("saldo").textContent=(s<0?"-":"")+rp(Math.abs(s));$("saldo").className="val "+(s<0?"out":"");
+  const per={};rows.filter(x=>x.t==="out").forEach(x=>per[x.k]=(per[x.k]||0)+x.n);
+  const ent=Object.entries(per).sort((a,c)=>c[1]-a[1]);
+  $("rincian").hidden=!ent.length;
+  $("rincianList").innerHTML=ent.map(([n,v])=>'<div class="cat"><span>'+esc(n)+'</span><span>'+rp(v)+' · '+Math.round(v/k*100)+'%</span></div><div class="bar"><i style="width:'+(v/k*100)+'%"></i></div>').join("");
+  $("list").innerHTML=rows.length?rows.map(x=>'<div class="tx"><div>'+esc(x.k)+(x.c?" · "+esc(x.c):"")+'<small>'+x.d.split("-").reverse().join("/")+'</small></div><div class="r"><b class="'+(x.t==="in"?"in":"out")+'">'+(x.t==="in"?"+":"-")+rp(x.n)+'</b><button class="del" data-id="'+esc(x.id)+'" aria-label="Hapus">×</button></div></div>').join(""):'<div class="empty">Belum ada transaksi di bulan ini.</div>';
+}
+$("list").onclick=e=>{const id=e.target.dataset&&e.target.dataset.id;if(id)delTx(id)};
+$("csv").onclick=()=>{
+  const b=$("bulan").value,q=v=>'"'+String(v).replace(/"/g,'""')+'"';
+  const rows=tx.filter(x=>x.d.slice(0,7)===b).sort((a,c)=>a.d.localeCompare(c.d));
+  const out=["Tanggal,Tipe,Kategori,Jumlah,Catatan"].concat(rows.map(x=>[x.d,x.t==="in"?"Pemasukan":"Pengeluaran",q(x.k),x.n,q(x.c)].join(","))).join("\n");
+  const a=document.createElement("a");a.href="data:text/csv;charset=utf-8,"+encodeURIComponent(out);a.download="catatan-"+b+".csv";a.click();
+};
+$("reset").onclick=()=>{if(confirm("Kosongkan SEMUA transaksi di spreadsheet? Tidak bisa dibatalkan dari sini."))resetAll()};
+$("tgl").value=today();$("bulan").value=today().slice(0,7);
+fillKat();initAuth();
+</script>
+</body>
+</html>
