@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Heri Setiawan Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://heriswn.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 10 Feb 2023 16:34:49 GMT</lastBuildDate><item><title><![CDATA[How To Go Back To A Previous Commit]]></title><description><![CDATA[This is how to go back to a previous commit! Step by step Go to github, check commit id. Checkout in the local git (" git checkout id-commit…]]></description><link>https://heriswn.github.io/how-to-go-back-to-a-previous-commit/</link><guid isPermaLink="false">https://heriswn.github.io/how-to-go-back-to-a-previous-commit/</guid><pubDate>Mon, 16 Jan 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;This is how to go back to a previous commit!&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Heri Setiawan Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://heriswn.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 30 Oct 2026 11:55:37 GMT</lastBuildDate><item><title><![CDATA[How To Go Back To A Previous Commit]]></title><description><![CDATA[This is how to go back to a previous commit! Step by step Go to github, check commit id. Checkout in the local git (" git checkout id-commit…]]></description><link>https://heriswn.github.io/how-to-go-back-to-a-previous-commit/</link><guid isPermaLink="false">https://heriswn.github.io/how-to-go-back-to-a-previous-commit/</guid><pubDate>Mon, 16 Jan 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;This is how to go back to a previous commit!&lt;/h1&gt;
 &lt;h2&gt;Step by step&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Go to github, check commit id.&lt;/li&gt;
@@ -161,12 +161,12 @@ firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 52.53164556962025%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGUlEQVQoz2N4+VT+PzUxw6iBowaOGkiEgQAivILvITAr4AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 52.53164556962025%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGUlEQVR42mN4+VT+PzUxw6iBowaOGkiEgQAivILvVUITMgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Default&quot;
-        title=&quot;Default&quot;
+        title=&quot;&quot;
         src=&quot;/static/7479dee46f86d727413e02683c8a9eb3/f058b/default.png&quot;
         srcset=&quot;/static/7479dee46f86d727413e02683c8a9eb3/c26ae/default.png 158w,
 /static/7479dee46f86d727413e02683c8a9eb3/6bdcf/default.png 315w,
